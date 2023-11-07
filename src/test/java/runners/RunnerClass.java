@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         //it quickly scans all the gherkin steps in all the feature files and will
         //give you the missing step definition
         //for actual execution, we need to set the value of dryRun to false
-        dryRun = false,
+        dryRun = true,
         //tags will identify the scenarios in a group and will execute the scenarios having these tags
         //We use 'and' and 'or' keywords to execute based on conditions
         //no execution will occur because there is no scenario that has both the tags specified
