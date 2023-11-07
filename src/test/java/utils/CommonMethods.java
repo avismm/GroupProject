@@ -87,7 +87,7 @@ public class CommonMethods extends PageInitializer {//inheriting the properties 
         } catch (IOException e) {
             e.printStackTrace();
         }
-return picByte;
+        return picByte;
     }
 
     //in java, we have a module which returns current date and time
