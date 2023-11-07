@@ -15,12 +15,12 @@ import org.junit.runner.RunWith;
         //it quickly scans all the gherkin steps in all the feature files and will
         //give you the missing step definition
         //for actual execution, we need to set the value of dryRun to false
-        dryRun = true,
+        dryRun = false,
         //tags will identify the scenarios in a group and will execute the scenarios having these tags
         //We use 'and' and 'or' keywords to execute based on conditions
         //no execution will occur because there is no scenario that has both the tags specified
         //tags ="@ali and @nafisa"
-        tags ="@test12",
+        tags ="@test123",
         //generating the test report
         //pretty is responsible for printing the step definition in the console during local execution
         //In your framework, all reports should be generated under target folder. Target folder is created by default in all projects.
