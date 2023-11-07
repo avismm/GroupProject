@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.syntax</groupId>
-    <artifactId>HRMSBATCH17</artifactId>
+    <artifactId>Group1B17</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -81,7 +81,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>HRMSBATCH17</projectName>
+                            <projectName>Group1B17</projectName>
                             <!-- optional, per documentation set this to "true" to bypass generation of Cucumber Reports entirely, defaults to false if not specified -->
                             <skip>false</skip>
                             <!-- output directory for the generated report -->
