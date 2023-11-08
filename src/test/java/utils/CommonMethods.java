@@ -73,7 +73,7 @@ public class CommonMethods extends PageInitializer {//inheriting the properties 
         } catch (IOException e) {
             e.printStackTrace();
         }
-return picByte;
+        return picByte;
     }
     public static String getTimeStamp (String pattern){
         Date date = new Date();
