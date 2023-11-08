@@ -2,7 +2,7 @@ package utils;
 
 import pages.LoginPage;
 
-public class PageInitializer {
+public class  PageInitializer {
 
     public static LoginPage loginPage;
 //public static DashboardPage dashboardPage;
