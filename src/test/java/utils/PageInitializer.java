@@ -5,7 +5,7 @@ import pages.MyInfoPage;
 
 import pages.*;
 
-public class PageInitializer {
+public class  PageInitializer {
 
     public static LoginPage loginPage;
 
