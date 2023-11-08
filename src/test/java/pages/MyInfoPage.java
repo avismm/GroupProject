@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import static utils.CommonMethods.driver;
-
+//Ahmed's class
 public class MyInfoPage {
     @FindBy(linkText = "My Info")
     public WebElement myInfoBtn;
