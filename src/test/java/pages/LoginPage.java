@@ -15,6 +15,7 @@ public class LoginPage extends CommonMethods {
     @FindBy(id="btnLogin")
     public WebElement loginBtn;
 
+
     public LoginPage(){
         //we will call the page factory class to initialize the elements
         //because when the object is created, the constructor will be called which will initialize the elements

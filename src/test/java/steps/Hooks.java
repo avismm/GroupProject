@@ -10,7 +10,7 @@ public class Hooks extends CommonMethods {
     public void start(){
         openBrowserAndLaunchApplication();
     }
-    @After
+   @After
     public void end(Scenario scenario){
         byte[] pic;
         if(scenario.isFailed()) {
