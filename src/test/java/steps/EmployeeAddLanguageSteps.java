@@ -4,18 +4,15 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.asserts.SoftAssert;
-import pages.MyInfoPage;
 import utils.CommonMethods;
 import utils.ConfigReader;
 
-import javax.swing.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+
 //AHMED'S CLASS IN CASE IF YOU WANT TO AMEND ANYTHING
 public class EmployeeAddLanguageSteps extends CommonMethods {
     @Given("employee enters user name and password")
@@ -24,8 +21,8 @@ public class EmployeeAddLanguageSteps extends CommonMethods {
        sendText(loginPage.passwordField, ConfigReader.getPropertyValue("password"));
     }
 
-    @Given("employee clicks on my login button")
-    public void employee_clicks_on_my_login_button() {
+    @Given("employee clicks on login button")
+    public void employee_clicks_on_login_button() {
      click(loginPage.loginBtn);
     }
 
@@ -48,18 +45,28 @@ public class EmployeeAddLanguageSteps extends CommonMethods {
     public void employee_selects_a_language_from_language_dropdown() {
         Select select=new Select(myInfoPage.languageDropDown);
         select.selectByVisibleText("English");
+       // myInfoPage.languageDropDown.sendKeys("Chinese");
     }
-    @Then("the selected language is selected")
-    public void the_selected_language_is_selected() {
 
+    @When("employee fills mandatory fields for next 2 dropdowns and clicks save")
+    public void employee_fills_mandatory_fields_for_next_2_dropdowns_and_clicks_save() {
+        Select select=new Select(myInfoPage.languageFluencyDropDown);
+        select.selectByIndex(1);
+        Select select2=new Select(myInfoPage.languageCompetencyDropDown);
+        select2.selectByIndex(1);
+        click(myInfoPage.languageSaveBtn);
+    }
+    @Then("the selected language is saved")
+    public void the_selected_language_is_saved() {
+
+        String textLanguageCellContentAfterSaving = myInfoPage.languageCellContentAfterSavingLocator.getText();
+        Assert.assertEquals("English",textLanguageCellContentAfterSaving);
         JavascriptExecutor Js=(JavascriptExecutor)driver;
-        Js.executeScript("window.scrollBy(0, 300)");
-        Js.executeScript("arguments[0].style.border='2px solid green'",myInfoPage.languageDropDown);
-        Assert.assertTrue(myInfoPage.englishLanguageLoc.isSelected());
+        Js.executeScript("arguments[0].style.border='2px solid green'",myInfoPage.languageCellContentAfterSavingLocator);
     }
     @Given("employee can select the fluency level from fluency dropdown as \\(Basic, Intermediate, Advanced, Fluent)")
     public void employee_can_select_the_fluency_level_from_fluency_dropdown_as_basic_intermediate_advanced_fluent() throws InterruptedException {
-        List<String> expectedList=new ArrayList();
+        List<String> expectedList=new LinkedList();
         expectedList.add("Basic");
         expectedList.add("Intermediate");
         expectedList.add("Advanced");
@@ -82,12 +89,11 @@ public class EmployeeAddLanguageSteps extends CommonMethods {
 
         Assert.assertEquals(expectedList,actualListText);
 
-
     }
 
     @Given("employee can select the Competency level from Competency dropdown as \\(Speaking, Reading, Writing)")
     public void employee_can_select_the_competency_level_from_competency_dropdown_as_speaking_reading_writing() {
-        List<String> expectedCompetencyList=new ArrayList();
+        List<String> expectedCompetencyList=new LinkedList();
         expectedCompetencyList.add("Speaking");
         expectedCompetencyList.add("Reading");
         expectedCompetencyList.add("Writing");
@@ -103,7 +109,7 @@ public class EmployeeAddLanguageSteps extends CommonMethods {
 
         JavascriptExecutor Js=(JavascriptExecutor)driver;
         Js.executeScript("window.scrollBy(0, 300)");
-       // Js.executeScript("arguments[0].style.border='3px solid red'",myInfoPage.languageCompetencyDropDown);
+
         click(myInfoPage.languageCompetencyDropDown);
         Js.executeScript("arguments[0].style.border='3px solid red'",myInfoPage.languageCompetencyDropDown);
         Assert.assertEquals(expectedCompetencyList,actualCompetencyListText);
@@ -119,4 +125,46 @@ public class EmployeeAddLanguageSteps extends CommonMethods {
         Assert.assertTrue(myInfoPage.commentsTextBox.isEnabled());
     }
 
+    @When("employee has not filled mandatory fields and tries to save language proficiency")
+    public void employee_has_not_filled_mandatory_fields_and_tries_to_save_language_proficiency() {
+      click(myInfoPage.languageSaveBtn);
     }
+    @Then("the system should display an error message")
+    public void the_system_should_display_an_error_message() {
+        Assert.assertTrue(myInfoPage.mandatoryFieldsErrorMsg.isDisplayed());
+    }
+    @When("employee clicks on the saved language to edit the language proficiency details")
+    public void employee_clicks_on_the_saved_language_to_edit_the_language_proficiency_details() {
+        click(myInfoPage.languageEditAfterSavingLocator);
+    }
+    @Then("the system should allow him to edit the language option")
+    public void the_system_should_allow_him_to_edit_the_language_option() {
+        Assert.assertTrue(myInfoPage.languageDropDown.isDisplayed());
+    }
+    @Then("the system should allow him to edit the fluency option")
+    public void the_system_should_allow_him_to_edit_the_fluency_option() {
+        Assert.assertTrue(myInfoPage.languageFluencyDropDown.isDisplayed());
+    }
+    @Then("the system should allow him to edit the competency option")
+    public void the_system_should_allow_him_to_edit_the_competency_option() {
+        Assert.assertTrue(myInfoPage.languageCompetencyDropDown.isDisplayed());
+    }
+    @Then("the system should allow him to edit the comments box")
+    public void the_system_should_allow_him_to_edit_the_comments_box() {
+        Assert.assertTrue(myInfoPage.commentsTextBox.isDisplayed());
+    }
+    @When("employee clicks on language check box in the previously saved languages table")
+    public void employee_clicks_on_language_check_box_in_the_previously_saved_languages_table() {
+       click(myInfoPage.languageCheckBox);
+    }
+    @When("employee clicks on delete button")
+    public void employee_clicks_on_delete_button() {
+        click(myInfoPage.deleteLanguageBtn);
+    }
+    @Then("the previously saved language is deleted")
+    public void the_previously_saved_language_is_deleted() {
+        Assert.assertNotEquals("English",myInfoPage.languageCellContentAfterSavingLocator.getText());
+    }
+
+
+}
