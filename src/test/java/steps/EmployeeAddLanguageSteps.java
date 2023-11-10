@@ -13,7 +13,6 @@ import utils.ConfigReader;
 
 import java.util.*;
 
-//AHMED'S CLASS IN CASE IF YOU WANT TO AMEND ANYTHING
 public class EmployeeAddLanguageSteps extends CommonMethods {
     @Given("employee enters user name and password")
     public void employee_enters_user_name_and_password() {
@@ -26,8 +25,8 @@ public class EmployeeAddLanguageSteps extends CommonMethods {
      click(loginPage.loginBtn);
     }
 
-    @Given("employee clicks on my info button")
-    public void employee_clicks_on_my_info_button() {
+    @Given("employee navigates to My Info page")
+    public void employee_navigates_to_My_Info_page() {
     click(myInfoPage.myInfoBtn);
     }
 
@@ -41,10 +40,38 @@ public class EmployeeAddLanguageSteps extends CommonMethods {
         click(myInfoPage.addLanguageBtn);
     }
 
-    @When("employee selects a language from language dropdown")
+    @Then("employee should see a list of available languages to choose Chinese later")
+    public void employee_should_see_a_list_of_available_languages_to_choose_chinese_later() {
+
+        List<String> standardLanguagesList = Arrays.asList("Afrikaans",
+     "Albanian", "Arabic", "Belarusian", "Bulgarian", "Catalan", "Chinese", "Croatian", "Czech", "Danish",
+     "Dutch", "English", "Esperanto", "Estonian", "Filipino", "Finnish", "French", "Galician", "Georgian",
+     "German", "Greek", "Creole", "Hebrew", "Hindi", "Hungarian", "Icelandic", "Indonesian", "Irish",
+     "Italian", "Japanese", "Korean", "Latvian", "Lithuanian", "Macedonian", "Malay", "Maltese",
+     "Norwegian", "Persian", "Polish", "Portuguese", "Romanian", "Russian", "Slovak", "Slovenian",
+     "Spanish", "Swahili", "Swedish", "Thai", "Turkish", "Ukrainian", "Vietnamese", "Welsh");
+        List<String> actualLanguagesList=new LinkedList<>();
+        Select select=new Select(myInfoPage.languageDropDown);
+
+        for (int i = 1; i <select.getOptions().size(); i++) {
+
+            actualLanguagesList.add(select.getOptions().get(i).getText());
+
+        }
+
+        JavascriptExecutor Js=(JavascriptExecutor)driver;
+      //  Js.executeScript("window.scrollBy(0, 300)");
+        Js.executeScript("arguments[0].style.border='3px solid red'",myInfoPage.languageDropDown);
+        click(myInfoPage.languageDropDown);
+        Assert.assertEquals(standardLanguagesList,actualLanguagesList);
+
+
+    }
+
+   @When("employee selects a language from language dropdown")
     public void employee_selects_a_language_from_language_dropdown() {
         Select select=new Select(myInfoPage.languageDropDown);
-        select.selectByVisibleText("English");
+        select.selectByVisibleText("Italian");
        // myInfoPage.languageDropDown.sendKeys("Chinese");
     }
 
@@ -60,13 +87,13 @@ public class EmployeeAddLanguageSteps extends CommonMethods {
     public void the_selected_language_is_saved() {
 
         String textLanguageCellContentAfterSaving = myInfoPage.languageCellContentAfterSavingLocator.getText();
-        Assert.assertEquals("English",textLanguageCellContentAfterSaving);
+        Assert.assertEquals("Italian",textLanguageCellContentAfterSaving);
         JavascriptExecutor Js=(JavascriptExecutor)driver;
         Js.executeScript("arguments[0].style.border='2px solid green'",myInfoPage.languageCellContentAfterSavingLocator);
     }
     @Given("employee can select the fluency level from fluency dropdown as \\(Basic, Intermediate, Advanced, Fluent)")
     public void employee_can_select_the_fluency_level_from_fluency_dropdown_as_basic_intermediate_advanced_fluent() throws InterruptedException {
-        List<String> expectedList=new LinkedList();
+        List<String> expectedList=new ArrayList();
         expectedList.add("Basic");
         expectedList.add("Intermediate");
         expectedList.add("Advanced");
@@ -74,7 +101,7 @@ public class EmployeeAddLanguageSteps extends CommonMethods {
         Select select=new Select(myInfoPage.languageFluencyDropDown);
         List<WebElement> langFluencyDropDownOptions = select.getOptions();
 
-        List<String> actualListText=new ArrayList<>();
+        List<String> actualListText=new ArrayList();
 
         for (int i = 1; i <langFluencyDropDownOptions.size() ; i++) {
 
@@ -93,7 +120,7 @@ public class EmployeeAddLanguageSteps extends CommonMethods {
 
     @Given("employee can select the Competency level from Competency dropdown as \\(Speaking, Reading, Writing)")
     public void employee_can_select_the_competency_level_from_competency_dropdown_as_speaking_reading_writing() {
-        List<String> expectedCompetencyList=new LinkedList();
+        List<String> expectedCompetencyList=new ArrayList();
         expectedCompetencyList.add("Speaking");
         expectedCompetencyList.add("Reading");
         expectedCompetencyList.add("Writing");

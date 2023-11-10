@@ -2,46 +2,47 @@ Feature: Employee language proficiency details
 #Ahmed's feature file
   Background:
      When employee enters user name and password
-     And employee clicks on login button
-     And employee clicks on my info button
-     And employee clicks on qualifications button
+     And  employee clicks on login button
+     *    employee navigates to My Info page
+     *    employee clicks on qualifications button
 
-  @empAddLanguage @all @passed
+  @empAddLanguage @regression @failed
   Scenario: Language dropdown field where employee can select language they are proficient in
 
-    *  employee clicks on Add button in languages section
-    *  employee selects a language from language dropdown
-    *  employee fills mandatory fields for next 2 dropdowns and clicks save
+    *    employee clicks on Add button in languages section
+    Then employee should see a list of available languages to choose Chinese later
+    # employee selects a language from language dropdown
+    #  employee fills mandatory fields for next 2 dropdowns and clicks save
 
     Then the selected language is saved
 
-  @FluencyDD @all @failed
+  @FluencyDD @regression @failed
   Scenario: Fluency dropdown field where employee can select fluency level
 
     *  employee clicks on Add button in languages section
 
     Then employee can select the fluency level from fluency dropdown as (Basic, Intermediate, Advanced, Fluent)
 
-  @CompetencyDD @all @failed
+  @CompetencyDD @regression @failed
   Scenario: Competency dropdown field where employee can select competency level
 
     *  employee clicks on Add button in languages section
     Then employee can select the Competency level from Competency dropdown as (Speaking, Reading, Writing)
 
-  @CommentsTextBox @all @passed
+  @CommentsTextBox @regression @passed
     Scenario: Comments text box where the employee can enter additional comments
 
     *    employee clicks on Add button in languages section
     Then employee can enter text in additional comments in language proficiency text box
 
-  @MandatoryFieldsValidation @all @passed
+  @MandatoryFieldsValidation @regression @passed
   Scenario: System validates mandatory fields before saving
 
     * employee clicks on Add button in languages section
     * employee has not filled mandatory fields and tries to save language proficiency
     Then the system should display an error message
 
-  @EditingSavedLanguageDetails @all @failed
+  @EditingSavedLanguageDetails @regression @failed
   Scenario: Employee can edit saved language option
 
     *  employee clicks on Add button in languages section
@@ -50,7 +51,7 @@ Feature: Employee language proficiency details
     *  employee clicks on the saved language to edit the language proficiency details
     Then the system should allow him to edit the language option
 
-  @EditingSavedLanguageDetails @all @failed
+  @EditingSavedLanguageDetails @regression @failed
 
   Scenario: Employee can edit saved fluency option
 
@@ -60,7 +61,7 @@ Feature: Employee language proficiency details
     *  employee clicks on the saved language to edit the language proficiency details
     Then the system should allow him to edit the fluency option
 
-  @EditingSavedLanguageDetails @all @passed
+  @EditingSavedLanguageDetails @regression @passed
   Scenario: Employee can edit saved competency option
 
     *  employee clicks on Add button in languages section
@@ -69,7 +70,7 @@ Feature: Employee language proficiency details
     *  employee clicks on the saved language to edit the language proficiency details
     Then the system should allow him to edit the competency option
 
-  @EditingSavedLanguageDetails @all @passed
+  @EditingSavedLanguageDetails @regression @passed
   Scenario: Employee can edit saved comments text box
 
     *  employee clicks on Add button in languages section
@@ -78,7 +79,7 @@ Feature: Employee language proficiency details
     *  employee clicks on the saved language to edit the language proficiency details
     Then the system should allow him to edit the comments box
 
-  @DeletingSavedLanguageDetails @all @passed
+  @DeletingSavedLanguageDetails @regression @passed
   Scenario: Employee can delete previously saved language proficiency details
 
     *  employee clicks on Add button in languages section
