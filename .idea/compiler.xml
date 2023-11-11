@@ -9,8 +9,5 @@
         <module name="Group1B17" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="GroupProject" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

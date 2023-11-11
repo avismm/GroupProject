@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+
         //features is used to provide the path of all the feature files
         features ="src/test/resources/features",
 
@@ -20,17 +21,19 @@ import org.junit.runner.RunWith;
         //tags will identify the scenarios in a group and will execute the scenarios having these tags
         //We use 'and' and 'or' keywords to execute based on conditions
 
-        tags ="@excel",
+        tags ="@passed",
 
         //generating the test report
         //pretty is responsible for printing the step definition in the console during local execution
         //In your framework, all reports should be generated under target folder. Target folder is created by default in all projects.
         //We will generate html report in target folder
         //rerun plugin will create a failed.txt under the target folder for all failed test cases.
+
         plugin = {"pretty", "html:target/cucumber.html","json:target/cucumber.json","rerun:target/failed.txt"}
 
 )
 
 public class RunnerClass {
     //it will be empty
+
 }

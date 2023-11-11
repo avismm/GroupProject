@@ -17,6 +17,9 @@ public class DashboardPage extends CommonMethods {
     @FindBy(id="welcome")
     public WebElement welcomeAdminLocator;
 
+    @FindBy(xpath ="//*[@id='empsearch_termination']/option[2]")
+    public WebElement includeDropdown;
+
     public DashboardPage(){
         //we will call the page factory class to initialize the elements
         //because when the object is created, the constructor will be called which will initialize the elements

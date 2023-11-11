@@ -1,5 +1,6 @@
 package utils;
 
+
 import pages.*;
 
 public class PageInitializer {
@@ -15,6 +16,8 @@ public class PageInitializer {
     public static membershipSectionPage membershipSectionPage;
     public static EditEmployeeInfoPage editEmployeeInfoPage;
     public static adminJobDetailsPage ajd;
+    public static MyInfoPage myInfoPage;
+    public static TerminateEmployeePage terminateEmployeePage;
     public static void initializePageObjects(){
         //calling the obj
         loginPage= new LoginPage();
@@ -27,5 +30,8 @@ public class PageInitializer {
         membershipSectionPage=new membershipSectionPage();
         editEmployeeInfoPage=new EditEmployeeInfoPage();
         ajd = new adminJobDetailsPage();
+        myInfoPage=new MyInfoPage();
+        employeeJobPage=new EmployeeJobPage();
+        terminateEmployeePage=new TerminateEmployeePage();
     }
 }
