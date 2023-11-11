@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
 
         //tags will identify the scenarios in a group and will execute the scenarios having these tags
         //We use 'and' and 'or' keywords to execute based on conditions
-        tags ="@sprint2",
+        tags ="@test987",
 
         //generating the test report
         //pretty is responsible for printing the step definition in the console during local execution
