@@ -15,6 +15,7 @@ public class PageInitializer {
     public static LanguagePage languagePage;
     public static membershipSectionPage membershipSectionPage;
     public static EditEmployeeInfoPage editEmployeeInfoPage;
+    public static adminJobDetailsPage ajd;
     public static MyInfoPage myInfoPage;
     public static TerminateEmployeePage terminateEmployeePage;
     public static void initializePageObjects(){
@@ -28,6 +29,7 @@ public class PageInitializer {
         languagePage= new LanguagePage();
         membershipSectionPage=new membershipSectionPage();
         editEmployeeInfoPage=new EditEmployeeInfoPage();
+        ajd = new adminJobDetailsPage();
         myInfoPage=new MyInfoPage();
         employeeJobPage=new EmployeeJobPage();
         terminateEmployeePage=new TerminateEmployeePage();
