@@ -16,6 +16,8 @@ public class DashboardPage extends CommonMethods {
 
     @FindBy(id="welcome")
     public WebElement welcomeAdminLocator;
+    @FindBy(id="menu_admin_viewAdminModule")
+    public WebElement adminButton;
 
     public DashboardPage(){
         //we will call the page factory class to initialize the elements
