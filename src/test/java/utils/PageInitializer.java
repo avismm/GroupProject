@@ -14,6 +14,7 @@ public class PageInitializer {
     public static LanguagePage languagePage;
     public static membershipSectionPage membershipSectionPage;
     public static EditEmployeeInfoPage editEmployeeInfoPage;
+    public static adminJobDetailsPage ajd;
     public static void initializePageObjects(){
         //calling the obj
         loginPage= new LoginPage();
@@ -25,5 +26,6 @@ public class PageInitializer {
         languagePage= new LanguagePage();
         membershipSectionPage=new membershipSectionPage();
         editEmployeeInfoPage=new EditEmployeeInfoPage();
+        ajd = new adminJobDetailsPage();
     }
 }
