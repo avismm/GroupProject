@@ -2,13 +2,13 @@ Feature: Editing Employee Personal Information
 
   Background:
     #Given user is navigated to HRMS application
-    When employee enters username and password
+    When employee enters username password
     Then employee clicks on the login button
     #Then user closes the browser
 
 
 
-  @editEmployeeInfo @test987
+  @editEmployeeInfo @test987 @regression @passed
   Scenario: Employee can Edits Personal Information
 
     When employee clicks on the My Info button

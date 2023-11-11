@@ -18,6 +18,7 @@ public class CommonMethods extends PageInitializer {//inheriting the properties 
 
     public static void openBrowserAndLaunchApplication(){
         ConfigReader.readProperties(Constants.CONFIGURATION_FILEPATH);
+
         //instance
 
         switch (ConfigReader.getPropertyValue("browser")){
@@ -37,6 +38,7 @@ public class CommonMethods extends PageInitializer {//inheriting the properties 
         driver.get(ConfigReader.getPropertyValue("url"));
 
         //initializing the web elements from the PageInitializer Class after loading the page
+
         initializePageObjects();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Constants.IMPLICIT_WAIT));
     }
@@ -72,6 +74,7 @@ public class CommonMethods extends PageInitializer {//inheriting the properties 
         driver.quit();
     }
 
+
     //take screenshot method for capturing all screenshots
     public static byte[] takeScreenshot(String fileName){
         //generating and storing screenshots
@@ -82,11 +85,13 @@ public class CommonMethods extends PageInitializer {//inheriting the properties 
         File sourceFile =ts.getScreenshotAs((OutputType.FILE));
 
         //defining the path from the constants class where the captured file will be stored
+
         try {
             FileUtils.copyFile(sourceFile, new File(Constants.SCREENSHOT_FILEPATH+fileName+" "+getTimeStamp("yyyy-MM-dd-HH-mm-ss")+" .png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
+
 return picByte;
     }
 
@@ -96,6 +101,7 @@ return picByte;
         //after getting the date, I need to format it as per my requirement
         SimpleDateFormat sdf =new SimpleDateFormat(pattern);
         //it will return the formatted date as per the pattern in string format
+
         return sdf.format(date);
 
     }

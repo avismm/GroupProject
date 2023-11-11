@@ -8,8 +8,8 @@ import utils.CommonMethods;
 import utils.ConfigReader;
 
 public class EditEmployeeSteps extends CommonMethods {
-    @When("employee enters username and password")
-    public void employee_enters_username_and_password() {
+    @When("employee enters username password")
+    public void employee_enters_username_password() {
         sendText(loginPage.usernameTextField, ConfigReader.getPropertyValue("EmployeeUserName"));
         sendText(loginPage.passwordField, ConfigReader.getPropertyValue("PW"));
     }

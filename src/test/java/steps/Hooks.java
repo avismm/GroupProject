@@ -10,6 +10,7 @@ public class Hooks extends CommonMethods {
     public void start(){
         openBrowserAndLaunchApplication();
     }
+
     @After
     //this will always execute at the end irrespective of the result
     public void end(Scenario scenario){
@@ -25,6 +26,7 @@ public class Hooks extends CommonMethods {
             pic =takeScreenshot("passed/"+scenario.getName());
         }
         scenario.attach(pic, "image/png",scenario.getName());
+
         closeBrowser();
     }
 }

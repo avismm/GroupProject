@@ -1,7 +1,7 @@
 Feature: Language scenarios
 
 
-  @language
+  @language @regression @passed
   Scenario: As an admin user should be able to add different languages in qualifications
     When user enters username and password
     And user clicks on login button

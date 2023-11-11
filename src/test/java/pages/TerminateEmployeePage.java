@@ -8,8 +8,11 @@ import utils.CommonMethods;
 
 
 public class TerminateEmployeePage extends CommonMethods {
-    @FindBy(id="//input[@id='dialogConfirm']")
+    @FindBy(id="dialogConfirm")
     public WebElement confirmBtn;
+
+    @FindBy(id="btnTerminateEmployement")
+    public WebElement activateBtn;
 
     public TerminateEmployeePage(){
         //we will call the page factory class to initialize the elements

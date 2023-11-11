@@ -12,7 +12,7 @@ Background:
     And navigates to the membership section
     Then the employee should be able to view the membership details
 
-  @membership
+  @membership @regression @passed
   Scenario: Add a Membership details
     When the employee selects the membership type from the dropdown field and validate that is filled in
     And selects the entity that paid for the subscription paid by from the dropdown field and validate that is filled in
@@ -23,7 +23,7 @@ Background:
     And clicks on the save button
     Then the system should store the membership details in the employee's profile
 
-  @membership
+  @membership @regression @passed
   Scenario: Editing Previously Saved Membership Details
     #Given the employee is on the membership section of their profile
     When the employee selects the previously saved membership details
@@ -32,12 +32,12 @@ Background:
     Then the system should update the membership details in the employee's profile
 
 
-    @membership
+    @membership @regression @passed
   Scenario: Displaying Membership Details on Profile Page
     #Given the employee is on their profile page
     Then the membership details should be displayed in a clear and organized format
 
-  @membership
+  @membership @regression @passed
   Scenario: Deleting Previously Saved Membership Details
     #Given the employee is on the membership section of their profile
     When the employee selects the previously saved membership details in membership profile
