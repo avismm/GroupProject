@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: runners.RunnerClass
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 106.0 s -- in runners.RunnerClass
+=======
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 31.51 s -- in runners.RunnerClass
+>>>>>>> Group1B17Youssef

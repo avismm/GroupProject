@@ -12,7 +12,7 @@ public class PageInitializer {
     public static EmployeeJobPage employeeJobPage;
     public static AdminPage adminPage;
     public static LanguagePage languagePage;
-
+    public static membershipSectionPage membershipSectionPage;
     public static void initializePageObjects(){
         //calling the obj
         loginPage= new LoginPage();
@@ -22,6 +22,7 @@ public class PageInitializer {
         employeeDetailsPage = new EmployeeDetailsPage();
         adminPage= new AdminPage();
         languagePage= new LanguagePage();
+        membershipSectionPage=new membershipSectionPage();
 
     }
 }
