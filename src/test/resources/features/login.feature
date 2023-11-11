@@ -1,9 +1,9 @@
 Feature: Login scenarios
 
-  @regression @test123 @passed
-  Scenario: Valid admin login
-    #Given user is navigated to HRMS application
+  @sprint2
+  Scenario: valid admin login
+   # Given user is navigated to HRMS application
     When user enters username and password
-    And user clicks on login button
+    And  user clicks on login button
     Then user is successfully logged in
-    #Then user closes the browser
+    #Then user close the browser

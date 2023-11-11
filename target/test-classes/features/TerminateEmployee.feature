@@ -6,7 +6,7 @@ Feature: Terminate employee
     * user is successfully logged in
     * user clicks on PIM option
 
-  @terminate @regression @passed
+  @terminate
   Scenario: Terminating employment of an employee
     #Given user has navigated to HRMS application
     When user clicks on Employee List option
