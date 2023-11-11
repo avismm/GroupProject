@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features ="src/test/resources/features",
         glue = "steps",
         dryRun = false,
-        tags ="@passed",
+        tags ="@failed",
         //tags will identify the scenarios in a group and will execute the scenarios having these tags
         //We use 'and' and 'or' keywords to execute based on conditions
         //no execution will occur because there is no scenario that has both the tags specified

@@ -11,8 +11,6 @@ Feature: Employee language proficiency details
 
     *    employee clicks on Add button in languages section
     Then employee should see a list of available languages to choose Chinese later
-    # employee selects a language from language dropdown
-    #  employee fills mandatory fields for next 2 dropdowns and clicks save
 
     Then the selected language is saved
 
@@ -88,6 +86,3 @@ Feature: Employee language proficiency details
     *  employee clicks on language check box in the previously saved languages table
     *  employee clicks on delete button
     Then the previously saved language is deleted
-
-
-

@@ -71,7 +71,7 @@ public class EmployeeAddLanguageSteps extends CommonMethods {
    @When("employee selects a language from language dropdown")
     public void employee_selects_a_language_from_language_dropdown() {
         Select select=new Select(myInfoPage.languageDropDown);
-        select.selectByVisibleText("Italian");
+        select.selectByVisibleText("French");
        // myInfoPage.languageDropDown.sendKeys("Chinese");
     }
 
@@ -87,7 +87,7 @@ public class EmployeeAddLanguageSteps extends CommonMethods {
     public void the_selected_language_is_saved() {
 
         String textLanguageCellContentAfterSaving = myInfoPage.languageCellContentAfterSavingLocator.getText();
-        Assert.assertEquals("Italian",textLanguageCellContentAfterSaving);
+        Assert.assertEquals("French",textLanguageCellContentAfterSaving);
         JavascriptExecutor Js=(JavascriptExecutor)driver;
         Js.executeScript("arguments[0].style.border='2px solid green'",myInfoPage.languageCellContentAfterSavingLocator);
     }
@@ -190,7 +190,7 @@ public class EmployeeAddLanguageSteps extends CommonMethods {
     }
     @Then("the previously saved language is deleted")
     public void the_previously_saved_language_is_deleted() {
-        Assert.assertNotEquals("English",myInfoPage.languageCellContentAfterSavingLocator.getText());
+        Assert.assertNotEquals("French",myInfoPage.languageCellContentAfterSavingLocator.getText());
     }
 
 
