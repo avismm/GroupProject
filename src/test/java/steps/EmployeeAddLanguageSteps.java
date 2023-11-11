@@ -4,7 +4,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -14,9 +13,9 @@ import utils.ConfigReader;
 import java.util.*;
 
 public class EmployeeAddLanguageSteps extends CommonMethods {
-    @Given("employee enters user name and password")
-    public void employee_enters_user_name_and_password() {
-       sendText(loginPage.usernameTextField, ConfigReader.getPropertyValue("employeeUserName"));
+    @Given("employee enters valid user name and password")
+    public void employee_enters_valid_user_name_and_password() {
+       sendText(loginPage.usernameTextField, ConfigReader.getPropertyValue("empUserName"));
        sendText(loginPage.passwordField, ConfigReader.getPropertyValue("password"));
     }
 

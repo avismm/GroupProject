@@ -8,8 +8,12 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import pages.DashboardPage;
 import pages.EmployeeJobPage;
 import utils.CommonMethods;
+
+import utils.ConfigReader;
 
 public class TerminateSteps extends CommonMethods {
 
@@ -25,16 +29,22 @@ public class TerminateSteps extends CommonMethods {
 
     @When("user enters employee id")
     public void user_enters_employee_id() {
-        sendText(employeeSearchPage.empSearchIdField, "76291748");
+
+        sendText(employeeSearchPage.empSearchIdField, ConfigReader.getPropertyValue("empId"));
+
     }
 
     @When("user clicks on search button")
     public void user_clicks_on_search_button() {
+        click(dashboardPage.includeDropdown);
         click(employeeSearchPage.searchBtn);
     }
+
+
     @When("user selects a specified employee from the list")
     public void user_selects_the_specified_employee_from_the_list() {
-        WebElement tableCell=driver.findElement(By.xpath("//table//td[a[text()='76291748']]"));
+        WebElement tableCell=driver.findElement(By.xpath("//table//td[a[text()='"+ConfigReader.getPropertyValue("empId")+"']]"));
+
         tableCell.click();
 
     }
@@ -49,41 +59,21 @@ public class TerminateSteps extends CommonMethods {
         click(employeeJobPage.employeeTerminateBtn);
     }
     @When("user clicks on the confirm button")
-    public void user_clicks_on_the_confirm_button() throws InterruptedException {
+    public void user_clicks_on_the_confirm_button() {
         By elementLocator = By.xpath("//input[@id='dialogConfirm']");
         WebElement element = getWait().until(ExpectedConditions.visibilityOfElementLocated(elementLocator));
         element.click();
-        /*// Get handles of all open windows (parent and popup)
-        String parentWindowHandle = driver.getWindowHandle();
-        for (String windowHandle : driver.getWindowHandles()) {
-            if (!windowHandle.equals(parentWindowHandle)) {
-                // Switch to the popup window
-                driver.switchTo().window(windowHandle);
-
-                // Now, you're in the popup window
-                // Locate and click on the confirm button
-                WebElement confirmBtn=driver.findElement(By.xpath("//input[@id='dialogConfirm']"));
-                click(confirmBtn);
-                //click(terminateEmployee.confirmBtn);
-                Thread.sleep(10000);
-                // Switch back to the parent window
-                driver.switchTo().window(parentWindowHandle);
-
-                // At this point, you're back in the parent window
-            }
-        }*/
-
     }
     @Then("employee is terminated successfully")
-    public void employee_is_terminated_successfully() throws InterruptedException {
-        //Thread.sleep(3000);
+    public void employee_is_terminated_successfully()  {
         By elementLocator = By.xpath("//input[@value='Activate Employment']");
         WebElement activateBtn = getWait().until(ExpectedConditions.visibilityOfElementLocated(elementLocator));
-       // getWait().until(ExpectedConditions.invisibilityOfElementWithText(true));
-     // WebElement activateBtn=driver.findElement(By.xpath("//input[@value='Activate Employment']"));
-        //String elementTxt =employeeJobPage.employeeTerminateBtn.getAttribute("value");
+
        String elementTxt =activateBtn.getAttribute("value");
         Assert.assertEquals("Activate Employment", elementTxt);
+        click(activateBtn);
+
+
     }
 
 }

@@ -10,15 +10,23 @@ public class Hooks extends CommonMethods {
     public void start(){
         openBrowserAndLaunchApplication();
     }
-   @After
+
+    @After
+    //this will always execute at the end irrespective of the result
     public void end(Scenario scenario){
+
+        //this array will hold the screenshot data
         byte[] pic;
-        if(scenario.isFailed()) {
-            pic = takeScreenshot("failed/"+scenario.getName());
-        }else {
-            pic = takeScreenshot("passed/"+scenario.getName());
+        //here, we take the screenshot before closing the browser
+        //Scenario class in cucumber will give us the info of the execution. It holds the complete info of the execution
+        //getName is the method which returns the name of the scenario we are executing
+        if(scenario.isFailed()){
+            pic =takeScreenshot("failed/"+scenario.getName());
+        }else{
+            pic =takeScreenshot("passed/"+scenario.getName());
         }
-        scenario.attach(pic,"image/png",scenario.getName());
+        scenario.attach(pic, "image/png",scenario.getName());
+
         closeBrowser();
     }
 }

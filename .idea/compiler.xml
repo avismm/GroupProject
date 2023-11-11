@@ -9,8 +9,5 @@
         <module name="Group1B17" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="HRMSBATCH17" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>

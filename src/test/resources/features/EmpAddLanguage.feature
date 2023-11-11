@@ -1,12 +1,12 @@
 Feature: Employee language proficiency details
 #Ahmed's feature file
   Background:
-     When employee enters user name and password
+     When employee enters valid user name and password
      And  employee clicks on login button
      *    employee navigates to My Info page
      *    employee clicks on qualifications button
 
-  @empAddLanguage @regression @failed
+  @empAddLanguage @failed @regression
   Scenario: Language dropdown field where employee can select language they are proficient in
 
     *    employee clicks on Add button in languages section
@@ -14,14 +14,14 @@ Feature: Employee language proficiency details
 
     Then the selected language is saved
 
-  @FluencyDD @regression @failed
+  @FluencyDD  @failed @regression
   Scenario: Fluency dropdown field where employee can select fluency level
 
     *  employee clicks on Add button in languages section
 
     Then employee can select the fluency level from fluency dropdown as (Basic, Intermediate, Advanced, Fluent)
 
-  @CompetencyDD @regression @failed
+  @CompetencyDD @failed @regression
   Scenario: Competency dropdown field where employee can select competency level
 
     *  employee clicks on Add button in languages section
@@ -40,7 +40,7 @@ Feature: Employee language proficiency details
     * employee has not filled mandatory fields and tries to save language proficiency
     Then the system should display an error message
 
-  @EditingSavedLanguageDetails @regression @failed
+  @EditingSavedLanguageDetails @failed @regression
   Scenario: Employee can edit saved language option
 
     *  employee clicks on Add button in languages section
@@ -49,7 +49,7 @@ Feature: Employee language proficiency details
     *  employee clicks on the saved language to edit the language proficiency details
     Then the system should allow him to edit the language option
 
-  @EditingSavedLanguageDetails @regression @failed
+  @EditingSavedLanguageDetails @failed @regression
 
   Scenario: Employee can edit saved fluency option
 
