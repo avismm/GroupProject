@@ -20,7 +20,6 @@ import org.junit.runner.RunWith;
 
         //tags will identify the scenarios in a group and will execute the scenarios having these tags
         //We use 'and' and 'or' keywords to execute based on conditions
-
         tags ="@passed",
 
         //generating the test report

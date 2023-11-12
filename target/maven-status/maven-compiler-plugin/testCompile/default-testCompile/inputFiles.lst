@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\steps\TerminateSteps.java
 C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\utils\ConfigReader.java
 C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\utils\ExcelReader.java
@@ -53,3 +54,19 @@ C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\Empl
 C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\TerminateEmployee.java
 C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\steps\LoginSteps.java
 >>>>>>> Group1B17ahmed1
+=======
+/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/steps/Hooks.java
+/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/pages/AdminMembershipPage.java
+/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/utils/ExcelReader.java
+/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/utils/CommonMethods.java
+/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/pages/DashboardPage.java
+/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/utils/ConfigReader.java
+/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/pages/LoginPage.java
+/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/utils/Constants.java
+/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/steps/AdminAddMembershipSteps.java
+/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/pages/EmployeeSearchPage.java
+/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/steps/LoginSteps.java
+/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/runners/RunnerClass.java
+/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/utils/PageInitializer.java
+/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/pages/AddEmployeePage.java
+>>>>>>> Group1B17rkia1
