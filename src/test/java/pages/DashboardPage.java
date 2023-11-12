@@ -16,6 +16,8 @@ public class DashboardPage extends CommonMethods {
 
     @FindBy(id="welcome")
     public WebElement welcomeAdminLocator;
+    @FindBy(id="menu_admin_viewAdminModule")
+    public WebElement adminButton;
 
     @FindBy(xpath ="//*[@id='empsearch_termination']/option[2]")
     public WebElement includeDropdown;
