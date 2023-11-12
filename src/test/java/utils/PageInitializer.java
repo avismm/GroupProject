@@ -5,6 +5,7 @@ import pages.*;
 public class PageInitializer {
     //created the obj
     public static LoginPage loginPage;
+    public static InvalidLoginPage invalidLoginPage;
     public static DashboardPage dashboardPage;
     public static EmployeeSearchPage employeeSearchPage;
     public static AddEmployeePage addEmployeePage;
@@ -21,6 +22,7 @@ public class PageInitializer {
     public static void initializePageObjects(){
         //calling the obj
         loginPage= new LoginPage();
+        invalidLoginPage= new InvalidLoginPage();
         dashboardPage= new DashboardPage();
         employeeSearchPage= new EmployeeSearchPage();
         addEmployeePage= new AddEmployeePage();
