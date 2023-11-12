@@ -4,7 +4,7 @@ Feature: add any Memberships scenarios
     When user enters username and password
     And user clicks on login button
     Then user is successfully logged in
-    @addMemberships @test123
+    @addMemberships @test123 @passed
     Scenario: add different memberships under qualifications
       When  Admin clicks on Admin option
       And   Admin clicks on Qualifications option

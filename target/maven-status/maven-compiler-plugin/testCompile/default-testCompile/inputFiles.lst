@@ -1,72 +1,32 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\steps\TerminateSteps.java
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\utils\ConfigReader.java
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\utils\ExcelReader.java
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\pages\TerminateEmployeePage.java
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\pages\LoginPage.java
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\steps\Hooks.java
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\utils\PageInitializer.java
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\steps\AddEmployeeSteps.java
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\pages\EmployeeJobPage.java
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\steps\LoginSteps.java
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\pages\AddEmployeePage.java
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\runners\RunnerClass.java
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\pages\EmployeeDetailsPage.java
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\utils\Constants.java
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\utils\CommonMethods.java
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\pages\DashboardPage.java
-C:\Users\LENOVO\OneDrive\Desktop\GroupProject\Group1B17\src\test\java\pages\EmployeeSearchPage.java
-=======
-C:\Users\MSI\Desktop\Group1B17Youssef\Group1B17\src\test\java\utils\Constants.java
-C:\Users\MSI\Desktop\Group1B17Youssef\Group1B17\src\test\java\steps\Hooks.java
-C:\Users\MSI\Desktop\Group1B17Youssef\Group1B17\src\test\java\utils\ConfigReader.java
-C:\Users\MSI\Desktop\Group1B17Youssef\Group1B17\src\test\java\utils\ExcelReader.java
-C:\Users\MSI\Desktop\Group1B17Youssef\Group1B17\src\test\java\pages\EmployeeSearchPage.java
-C:\Users\MSI\Desktop\Group1B17Youssef\Group1B17\src\test\java\pages\DashboardPage.java
-C:\Users\MSI\Desktop\Group1B17Youssef\Group1B17\src\test\java\pages\AddEmployeePage.java
-C:\Users\MSI\Desktop\Group1B17Youssef\Group1B17\src\test\java\utils\CommonMethods.java
-C:\Users\MSI\Desktop\Group1B17Youssef\Group1B17\src\test\java\pages\membershipSectionPage.java
-C:\Users\MSI\Desktop\Group1B17Youssef\Group1B17\src\test\java\steps\LoginSteps.java
-C:\Users\MSI\Desktop\Group1B17Youssef\Group1B17\src\test\java\pages\LoginPage.java
-C:\Users\MSI\Desktop\Group1B17Youssef\Group1B17\src\test\java\runners\RunnerClass.java
-C:\Users\MSI\Desktop\Group1B17Youssef\Group1B17\src\test\java\utils\PageInitializer.java
-C:\Users\MSI\Desktop\Group1B17Youssef\Group1B17\src\test\java\steps\membershipSectionSteps.java
->>>>>>> Group1B17Youssef
-=======
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\EditEmployeeInfoPage.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\steps\AdminAddMembershipSteps.java
 C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\steps\EmployeeAddLanguageSteps.java
-C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\runners\RunnerClass.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\steps\EditEmployeeSteps.java
 C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\LoginPage.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\steps\membershipSectionSteps.java
 C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\utils\ConfigReader.java
 C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\steps\TerminateSteps.java
 C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\DashboardPage.java
-C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\steps\LanguageSteps.java
-C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\utils\ExcelReader.java
 C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\utils\CommonMethods.java
-C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\MyInfoPage.java
 C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\utils\PageInitializer.java
 C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\EmployeeDetailsPage.java
-C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\EmployeeJobPage.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\AdminMembershipPage.java
 C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\steps\Hooks.java
 C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\utils\Constants.java
-C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\EmployeeSearchPage.java
-C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\TerminateEmployee.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\AddEmployeePage.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\steps\adminJobDetailsSteps.java
 C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\steps\LoginSteps.java
->>>>>>> Group1B17ahmed1
-=======
-/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/steps/Hooks.java
-/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/pages/AdminMembershipPage.java
-/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/utils/ExcelReader.java
-/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/utils/CommonMethods.java
-/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/pages/DashboardPage.java
-/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/utils/ConfigReader.java
-/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/pages/LoginPage.java
-/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/utils/Constants.java
-/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/steps/AdminAddMembershipSteps.java
-/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/pages/EmployeeSearchPage.java
-/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/steps/LoginSteps.java
-/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/runners/RunnerClass.java
-/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/utils/PageInitializer.java
-/Users/rkiakhayoussef/Desktop/Rkia12/Group1B17/src/test/java/pages/AddEmployeePage.java
->>>>>>> Group1B17rkia1
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\AdminPage.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\steps\AddEmployeeSteps.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\TerminateEmployeePage.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\runners\RunnerClass.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\steps\AddLanguageStep.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\utils\ExcelReader.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\MyInfoPage.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\InvalidLoginPage.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\EmployeeJobPage.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\adminJobDetailsPage.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\EmployeeSearchPage.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\steps\InvalidLoginSteps.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\LanguagePage.java
+C:\Users\ahmed\OneDrive\Desktop\Group Project\Group1B17\src\test\java\pages\membershipSectionPage.java

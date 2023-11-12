@@ -18,8 +18,8 @@ Feature: add employee scenario
       Scenario: adding multiple employees from data table
         When user adds multiple employees from data table
           | firstName | middleName | lastName | employeeId|
-          | Alvisae     | Samaae          | Muhweraae  | B111121 |
-          | Kenanae     | Jonesae         | Andrewae   | B112029  |
+          | Alvisae     | Samaae          | Muhweraae  | B711121 |
+          | Kenanae     | Jonesae         | Andrewae   | B612029  |
 
 
 
