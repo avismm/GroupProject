@@ -1,5 +1,6 @@
 package steps;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -7,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.CommonMethods;
 import utils.Constants;
+import utils.DbUtils;
 import utils.ExcelReader;
 
 import java.util.Iterator;
@@ -14,6 +16,14 @@ import java.util.List;
 import java.util.Map;
 
 public class AddEmployeeSteps extends CommonMethods {
+    String empId;
+    String firstNameFFE;
+    String middleNameFFE;
+    String lastNameFFE;
+
+    String firstNameFBE;
+    String middleNameFBE;
+    String lastNameFBE;
     @When("user clicks on add employee option")
     public void user_clicks_on_add_employee_option() {
         click(dashboardPage.addEmployeeButton);
@@ -47,6 +57,11 @@ public class AddEmployeeSteps extends CommonMethods {
         sendText(addEmployeePage.firstNameLoc, firstN);
         sendText(addEmployeePage.middleNameLoc, middleN);
         sendText(addEmployeePage.lastNameLoc, lastN);
+
+        firstNameFFE=firstN;
+        middleNameFFE=middleN;
+        lastNameFFE=lastN;
+        empId=addEmployeePage.employeeIdLocator.getAttribute("value");
     }
 
     @When("user enters {string} and {string} and enters {string}")
@@ -155,5 +170,21 @@ public class AddEmployeeSteps extends CommonMethods {
         }
 
     }
+    @Then("fetch employee info from backend")
+    public void fetch_employee_info_from_backend() {
+        String query=" select * from hs_hr_employees where employee_id='"+empId+"';";
+        List<Map<String,String>> data= DbUtils.fetch(query);
+        Map<String,String> firstRow=data.get(0);
+        firstNameFBE=firstRow.get("emp_firstname");
+        middleNameFBE=firstRow.get("emp_middle_name");
+        lastNameFBE=firstRow.get("emp_lastname");
+    }
+    @Then("verify employee info is properly stored in db")
+    public void verify_employee_info_is_properly_stored_in_db() {
+        Assert.assertEquals("FirstNam from frontend is not same as backend ",firstNameFFE,firstNameFBE);
+        Assert.assertEquals("MiddleName from frontend is not same as backend ",middleNameFFE,middleNameFBE);
+        Assert.assertEquals("LastName from frontend is not same as backend ",lastNameFFE,lastNameFBE);
+    }
+
 
 }
