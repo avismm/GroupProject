@@ -24,7 +24,7 @@ Feature: add employee scenario
 
   @db
   Scenario: Add Employee from Frontend and verify from DB
-    When user enters "fahim" and "Naughty" and "Hedaiy"
+    When user enters "fahim7321" and "Naughty1" and "Hedaiy2"
     And user clicks on save button
     Then employee added successfully
     And fetch employee info from backend
