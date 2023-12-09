@@ -19,3 +19,33 @@ Feature: Syntax API workflow feature
     And the retrieved data at "employee" object matches the data used to create employee
     |emp_firstname|emp_lastname|emp_middle_name|emp_gender|emp_birthday|emp_status|emp_job_title|
     |      hind   | pak        |      ms         |  Male        | 2002-11-25           |  confirmed        |    QA         |
+
+    @json
+    Scenario: Creating the employee using json payload
+      Given a request is prepared for creating an employee via json payload
+      When a POST call is made to create an employee
+      Then the status code for this request is 201
+      And the employee id "Employee.employee_id" is stored as global variable for other request
+      And the response body contains "Message" key and value "Employee Created"
+
+  @jsondynamic @update1
+  Scenario: Creating the employee using json payload
+    Given a request is prepared for creating an employee with dynamic data "hind", "pak", "ms", "M", "2002-11-25", "confirmed", "qa"
+    When a POST call is made to create an employee
+    Then the status code for this request is 201
+    And the employee id "Employee.employee_id" is stored as global variable for other request
+    And the response body contains "Message" key and value "Employee Created"
+
+  @getjobtitle
+  Scenario: Getting all job titles
+    Given a request is prepared to get all job titles
+    When a GET call is made to get all job titles
+    Then the status code for this employee is 200
+
+  @update1
+  Scenario: Updating the employee
+    Given a request is prepared to update the employee in the HRMS system
+    When a PUT call is made to update an employee
+    Then the status code for updating the employee is 200
+
+
